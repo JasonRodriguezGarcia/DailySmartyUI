@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export default class RecentPosts extends Component {
+class RecentPosts extends Component {
   render() {
     return (
       <div className='recent-posts'>
@@ -12,8 +12,9 @@ export default class RecentPosts extends Component {
             <li>Recent post 2</li>
             </ul>
         </div>
-
       </div>
     )
   }
 }
+
+export default RecentPosts;
