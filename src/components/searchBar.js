@@ -35,6 +35,7 @@ class SearchBar extends Component {
 // usando la función reduxForm. Esto envuelve al componente
 // SearchBar y le proporciona capacidades adicionales 
 // relacionadas con la gestión del formulario.
+// requerido por reduxForm
 SearchBar = reduxForm ({
   form: "searchBar"
 }) (SearchBar)
