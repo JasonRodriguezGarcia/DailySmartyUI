@@ -11,11 +11,11 @@ export function fetchRecentPosts() {
     axios.get('https://swapi.dev/api/planets/')    
       .then(response => {
 //        console.log(response.data.post);
-        console.log(response.data);
+        console.log(response.data.results);
         dispatch({
           type: SET_RECENT_POSTS,
-          payload: response.data
+          payload: response.data.results
         })
-    });
+      })
   }
 }
