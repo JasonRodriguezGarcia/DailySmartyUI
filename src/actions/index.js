@@ -19,3 +19,15 @@ export function fetchRecentPosts() {
       })
   }
 }
+export function fetchPostsWithQuery(query) {
+  return function(dispatch) {
+    axios.get(`https://swapi.dev/api/planets/?search=${query}`)
+      .then(response => {
+        console.log(response.data.results);
+        dispatch({
+          type: SET_RECENT_POSTS,
+          payload: response.data.results
+        })
+      })
+  }
+}
