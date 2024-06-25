@@ -9,6 +9,7 @@ class RecentPosts extends Component {
   componentDidMount() {
     this.props.fetchRecentPosts();
   }
+  
   renderPosts = function() {
     const posts = this.props.recentPosts.map((post, index) => {
         if(index < 3) {
@@ -19,15 +20,15 @@ class RecentPosts extends Component {
         }
     })
     return posts
-}
+  }
   render() {
     return (
       <div className='recent-posts'>
         <div className='recent-posts__wrapper'>
-          <div className='recent-post__heading'>Recent post</div>
-            <ul className='recent-post__posts'>
-              {this.renderPosts()}
-            </ul>
+          <div className='recent-posts__heading'>Recent post</div>
+          <ul className='recent-posts__posts'>
+            {this.renderPosts()}
+          </ul>
         </div>
       </div>
     )
