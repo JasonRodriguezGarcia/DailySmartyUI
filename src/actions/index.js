@@ -21,7 +21,7 @@ export function fetchRecentPosts() {
       })
   }
 }
-export function fetchPostsWithQuery(query) {
+export function fetchPostsWithQuery(query, callback) {
   return function(dispatch) {
     axios.get(`https://swapi.dev/api/planets/?search=${query}`)
       .then(response => {
@@ -30,6 +30,7 @@ export function fetchPostsWithQuery(query) {
           type: SET_RESULTS_POSTS,
           payload: response.data.results
         })
+        if(callback) { callback() }
       })
   }
 }
