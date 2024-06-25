@@ -21,8 +21,8 @@ class SearchBar extends Component {
     // estamos obteniendo específicamente la función handleSubmit de this.props.
     const { handleSubmit } = this.props;
     return (
-      <form  className="search-bar" onSubmit=
-        {handleSubmit(this.handleFormSubmit.bind(this))}>
+      <form className={`search-bar search-bar__${this.props.page}`}
+        onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
 
        {/* <Field name="query" component={this.renderInput} /> */}
         <div className="search-bar__wrapper">
