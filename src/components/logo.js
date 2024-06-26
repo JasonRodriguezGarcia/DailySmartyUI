@@ -11,6 +11,7 @@ class Logo extends Component {
     return (
       <div className='logo-main'>
         <Link to="/">
+            {/* <h1>Based on Starwars API Planets from https://swapi.dev/</h1> */}
             <img style={size} 
               alt="daily smarty ui image logo big"
               src="/assets/ds_circle_logo.png"/>

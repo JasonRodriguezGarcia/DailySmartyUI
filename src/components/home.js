@@ -17,6 +17,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
+        <h3>Based on Starwars API Planets from https://swapi.dev/</h3>
         <Logo/>
         <SearchBar page="home" onSubmit={(query) => this.handleSearchBarSubmit(query)}/>
         <RecentPosts/>
