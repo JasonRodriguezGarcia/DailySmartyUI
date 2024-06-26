@@ -43,8 +43,9 @@ class Post extends Component {
       return (
         <li className="recent-post">
           <div className="recent-post__title">
-              {/* {this.props.title} */}
-              {this.props.name}
+            {/* {this.props.title} */}
+            <a href={this.props.url_for_post}>{this.props.name}</a>
+            {/* {this.props.name} */}
           </div>
           <div className="recent-post__topics">
               {this.renderTopics()}
@@ -55,7 +56,7 @@ class Post extends Component {
         return (
           <li className="result-post">
             <div className="result-post__topics">
-                {this.renderTopics()}
+              {this.renderTopics()}
             </div>
             <div className="result-post__title">
               <a href={this.props.url}
@@ -66,11 +67,11 @@ class Post extends Component {
               {this.props.name}</a>
             </div>
             <AnimateHeight
-                duration={500}
-                height={this.state.height}
+              duration={500}
+              height={this.state.height}
             >
               <div className="result-post__links">
-                  {this.renderLinks()}
+                {this.renderLinks()}
               </div>
             </AnimateHeight>
           </li>
