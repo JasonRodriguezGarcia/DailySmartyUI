@@ -37,6 +37,13 @@ $color-blue-one: #0079FF;
 $color-gray-one: #666666;
 $color-gray-two: #B3B3B3;
 $color-gray-three: #D8D8D8;
+.no-content {
+// after colors, otherwise not founded
+  color: $color-gray-one;
+  font-size: 14px;
+  line-height: 17px;
+}
+
 
 @import './mixins';
 @import './home';
